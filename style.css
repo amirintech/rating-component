@@ -1,0 +1,165 @@
+/* Variables */
+:root {
+  --color-orange: hsl(25, 97%, 53%);
+  --color-white: hsl(0, 0%, 100%);
+  --color-grey-light: hsl(217, 12%, 63%);
+  --color-grey-medium: hsl(216, 12%, 54%);
+  --color-blue: hsl(213, 19%, 18%);
+  --color-blue-dark: hsl(216, 12%, 8%);
+
+  --mobile-width: 375px;
+  --desktop-width: 1440px;
+}
+
+/* General Styles */
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: var(--color-grey-medium);
+  font-family: "Overpass", sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.7;
+  background-color: var(--color-blue-dark);
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Typography */
+.title {
+  color: var(--color-white);
+  margin-top: 2.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.description {
+  margin-top: 0;
+  margin-bottom: 2.75rem;
+}
+
+/* Icon & Rating Values */
+.rating-values-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.75rem;
+}
+
+.rating-value,
+.icon-container {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--color-blue);
+  border-radius: 50%;
+  height: 50px;
+  padding: 15px;
+  width: 50px;
+}
+
+.rating-value {
+  transition: background-color 0.3s, color 0.3s;
+  cursor: pointer;
+}
+
+.rating-value:hover {
+  color: var(--color-white);
+  background-color: var(--color-orange);
+}
+
+.selected {
+  background-color: var(--color-grey-medium);
+  color: var(--color-white);
+}
+
+/* Button */
+.btn {
+  background-color: var(--color-orange);
+  border-radius: 100px;
+  border: none;
+  color: var(--color-white);
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 700;
+  letter-spacing: 2px;
+  padding: 1.35rem;
+  position: relative;
+  text-transform: uppercase;
+  transition: 0.3s;
+  transition: 100%;
+  width: 100%;
+}
+
+.warning {
+  background-color: rgb(240, 45, 45);
+  color: var(--color-white);
+}
+
+.btn:hover {
+  color: var(--color-orange);
+  background-color: var(--color-white);
+}
+
+/* Rating Card */
+.rating-card {
+  background: rgb(30, 37, 47);
+  background: linear-gradient(
+    130deg,
+    rgba(30, 37, 47, 1) 0%,
+    rgba(25, 30, 38, 1) 100%
+  );
+
+  max-width: var(--mobile-width);
+  border-radius: 25px;
+  padding: 3rem;
+}
+
+/* Thanks Card */
+.thanks-card {
+  text-align: center;
+  padding: 4.5rem 2.5rem;
+}
+
+.thanks-card .description {
+  margin-bottom: 0;
+}
+
+.thanks-img {
+  display: block;
+  margin: 0 auto 3rem;
+}
+
+.rating-tag {
+  display: inline-block;
+  background-color: var(--color-blue);
+  color: var(--color-orange);
+  padding: 0.45em 1.25em;
+  border-radius: 30px;
+}
+
+.attribution {
+  margin-top: 3rem;
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
